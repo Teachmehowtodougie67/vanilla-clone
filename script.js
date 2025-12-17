@@ -10,6 +10,7 @@ function displayTodos(todos){
 
         const titleSpan = document.createElement('span');
         titleSpan.appendChild(document.createTextNode(todo.title));
+        // titleSpan.style.textDecoration = 'line-through'
 
         card.appendChild(titleSpan);
 

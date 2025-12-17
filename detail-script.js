@@ -6,10 +6,10 @@ function displayTodo(todo) {
     descriptionSpan.innerHTML = todo.description;
 
     const creationDateSpan = document.getElementById('todo-creation-date');
-    creationDateSpan.innerHTML = todo.creationDate;
+    creationDateSpan.innerHTML = formaDate(todo.creationDate);
 
     const endDateSpan = document.getElementById('todo-end-date');
-    endDateSpan.innerHTML = todo.endDate;
+    endDateSpan.innerHTML = formaDate(todo.endDate);
 
     const colorDiv = document.getElementById('todo-color');
     colorDiv.style.backgroundColor = todo.color;
@@ -21,6 +21,22 @@ function displayTodo(todo) {
         doneSpan.innerHTML = 'da completare'
     }
 
+}
+
+function formaDate(dateISO) {
+    const date = new Date(dateISO);
+
+    // const formattedDate = `${date.getDate()}/${date.getMonth() + 1}/${date.getFullYear()}`
+
+    // return formattedDate;
+
+    const options = {
+        year: "numeric",
+        month: "numeric",
+        day: "numeric",
+    };
+
+    return date.toLocaleDateString("it-IT", options);
 }
 
 const searchParams = new URLSearchParams(window.location.search);
