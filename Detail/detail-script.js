@@ -1,3 +1,7 @@
+import { getTodo, deleteTodo, changeDoneStatus } from "../shared/todo-service";
+
+
+
 function displayTodo(todo) {
     const titleHeader = document.getElementById('todo-title');
     titleHeader.innerHTML = todo.title;
@@ -66,7 +70,7 @@ function deleteTodoAndRedirect() {
 
     if (confirm("Vuoi veramente cancellare il todo???")) {
         deleteTodo(selectedTodo.id).then(_ => {
-            window.location.assign('./')
+            window.location.assign('../')
         });  
     }
 }
@@ -78,3 +82,10 @@ function changeStatus() {
         displayTodo(selectedTodo);
     })
 }
+
+
+document.getElementById("status-btn")
+.addEventListener("click",changeStatus);
+
+document.getElementById("delete-btn")
+.addEventListener("click",deleteTodoAndRedirect);

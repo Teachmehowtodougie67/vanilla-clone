@@ -1,4 +1,6 @@
-function displayTodos(todos){
+ import {getAllTodos, changeDoneStatus} from "./shared/todo-service.js";
+ 
+    function displayTodos(todos){
 
     const todosContainer = document.getElementById('todos-container');
     todosContainer.innerHTML = "";
@@ -64,7 +66,7 @@ function displayTodos(todos){
         const detailLink = document.createElement('a');
         detailLink.appendChild(document.createTextNode("🠊"));
         detailLink.classList.add("action");
-        detailLink.href = './detail.html?todoId=' + todo.id;
+        detailLink.href = './detail/detail.html?todoId=' + todo.id;
 
         actionsDiv.appendChild(detailLink);
 
@@ -103,6 +105,17 @@ function orderByCreationDate(){
     todos.sort(compareDates);
     displayTodos(todos);
 }
+
+document.getElementById("sort-title-btn")
+.addEventListener('click', orderByTitle);
+
+
+document.getElementById("sort-creation-btn")
+.addEventListener('click', orderByCreationDate);
+
+
+
+
 
 
 // due tasti nella home (lista di todo)

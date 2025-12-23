@@ -1,3 +1,6 @@
+import {postTodo} from "../shared/todo-service.js"
+
+
 
 function saveTodo(event) {
     event.preventDefault();
@@ -21,6 +24,9 @@ function saveTodo(event) {
     .then(createdTodo => {
         console.log('Created todo:', createdTodo);
         form.reset();
-        window.location.assign('./');
+        window.location.assign('../');
     })
 }
+
+document.getElementById("todo-form")
+.addEventListener('submit',saveTodo) 

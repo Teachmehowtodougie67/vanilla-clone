@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>todo app</title>
-    <link rel="stylesheet" href="./detail-style.css">
+    <link rel="stylesheet" href=".  /detail-style.css">
 </head>
 <body>
     <div class="page">
         <header>
-            <a class="back-link" href="./">🠈</a>
+            <a class="action" href="../">🠈</a>
             <h1 id="todo-title"></h1>
             <div class="colored-dot" id="todo-color"></div>
         </header>
@@ -33,13 +33,13 @@
                 <span id="todo-done"></span>
             </div>
             <div>
-                <button id="status-btn" onclick="changeStatus()"></button>
-                <button onclick="deleteTodoAndRedirect()">Elimina</button>
+                <button class="text-btn" id="status-btn"></button>
+                <button class="text-btn" id="delete-btn" >Elimina</button>
             </div>                        
         </main>
 
     </div>
 </body>
-<script src="./todo-service.js"></script>
-<script src="./detail-script.js"></script>
+<!-- <script src="../shared/todo-service.js"></script> -->
+<script type="module" src="./detail-script.js"></script>
 </html>

@@ -1,0 +1,35 @@
+@import url('../shared/style.css');
+
+
+
+
+
+.back-link{
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 50%;
+    font-size: x-large;
+    min-width: 30px;
+    min-height: 30px;
+    text-decoration: none;
+    color: black;
+    line-height: 30px;
+    text-align: center;
+    display: inline-block;
+}
+
+.back-link:hover{
+    background-color: black;
+    color: white;
+}
+
+.detail-info{
+    font-size: x-large;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
